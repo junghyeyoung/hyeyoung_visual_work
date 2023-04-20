@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2023_04_05 form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&display=swap" rel="stylesheet">
+    <style>
+        .container{
+            width: 768px;
+            margin: 0 auto;
+        }
+        h1{
+            color: black;
+            font-family: 'Nanum Myeongjo', serif;
+        }
+        .login{
+            width: 768px;
+            margin: 0 auto;
+            font-size: 18px;
+            color: #6c6b70;
+            margin-bottom: 20px;
+        }
+        #login-form > input{
+            width: 100%;
+            height: 30px;
+            padding: 0 10px;
+            box-sizing: border-box;
+            margin-bottom: 16px;
+        }
+        #input1{
+            width: 300px;
+            height: 40px;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 2px solid black;
+        }
+        #input2{
+            width: 100px;
+            height: 50px;
+            background-color: rgb(71, 94, 94);
+            color: white;
+            border: none;
+            
+        }
+        .my-button{
+            background-color:rgb(71, 94, 94);
+            color: white;
+            border: none;
+            width: 100px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>설문지 응답</h1>
+        <form action="login.jsp" method="post">
+            <input id="input1" type="text" placeholder="입력해주세요!">
+            <input id="input2" type="submit">
+        </form>
+    </div>
+    <br>
+    <div class="login">
+        <h1>정보를 입력하세요.</h1>
+        <form method="post" action="login.jsp" id="login-form">
+            <label for="email">이메일</label>
+            <input type="text" id="email" name="email">
+            <br>
+            <label for="pwd">비밀번호</label>
+            <input type="password" name="pwd" id="pwd">
+            <br>
+            <label for="remember-check">
+                <input type="checkbox" id="remember-check"> 아이디 저장하기
+            </label>
+            <br>
+            <br>
+            <button type="submit" class="my-button">로그인</button>
+        </form>
+    </div>
+</body>
+</html>

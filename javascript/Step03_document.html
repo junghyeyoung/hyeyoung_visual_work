@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step03_document.html
+
+    </title>
+</head>
+<body>
+    <h1>Document object 사용해 보기</h1>
+    <button onclick="change()">바꾸기</button>
+    <p id="one" onmouseover="mouseover()">p1</p>
+    <p class="my-class">p2</p>
+    <p class="my-class">p3</p>
+    <input type="text" id="two">
+    <button onclick="send()">전송 &rarr;</button>
+    <input type="text" id="three">
+    <script>
+        //h1 요소의 innertext 를 특정 버튼(바꾸기)을 눌렀을 때 바꾸고 싶다.
+        let change=function(){
+            document.querySelector("h1").innerText="오잉?"
+        }
+        // function change(){
+        //     document.querySelector("h1").innerText="오잉?"
+        // }
+
+        // p1에 mouseover 가 되었을 때 innertext 를 "마우스가 올라왔네?" 라고 변경
+        // let mouseover=function(){
+        //     document.querySelector("#one").innerText="마우스가 올라왔네?"
+        // };
+        // function mouseover(){
+        //     document.querySelector("#one").innerText="마우스가 올라왔네?"
+        // };
+        let mouseover=()=>{
+            document.querySelector("p").innerText="마우스가 올라왔네?"
+        };
+        
+        let send=()=>{
+            //1. 첫번째 input 요소에 입력한 value 를 읽어온다.
+            let msg=document.querySelector("#two").value;
+            //2. 위에서 읽어온 value 값을 두번째 input 요소의 value 값으로 넣어준다.
+            document.querySelector("#three").value = msg;
+            //여기 안에서 이루어 지는 함수는 local 지역 변수이다.
+        };
+        
+        /* 아래 코드도 가능하다.
+
+        let firstInput=document.querySelector("#two");
+        let secondInput=document.querySelector("#three");
+
+        let send=()=>{
+            secondInput.value = firstInput.value;
+        }
+
+        */
+        
+    </script>
+</body>
+</html>

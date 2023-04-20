@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document.html</title>
+    <style>
+        #one{
+            font-size: 25px;
+            font-weight: bolder;
+        }
+        .box{
+            width: 150px;
+            height: 100px;
+            background-color: aquamarine;
+            cursor: pointer;
+            margin: 10px;
+            text-align: center;
+            line-height: 100px;
+            transition: margin-left 0.6s ease-in-out;
+            /* margin-left: 100px; */
+        }
+    </style>
+</head>
+<body>
+    <h1> <strong>Document object</strong> 기능 정리</h1>
+    <button onclick="change()"> 바꾸기 </button>
+    <p id="one" onmouseover="change2()"> <strong>마우스를 글 위에 얹어보세요 !</strong></p>
+    <p id="two"> <strong>글을</strong> 빈칸에 넣어보세요 !</p>
+    <p id="three"></p>
+    <input type="text" id="쓰기">
+    <button onclick="send()"> 넘기기 &rarr;</button>
+    <input type="text" id="받기">
+    <div class="box" onclick="move()">눌러보셈</div>
+    <button onclick="reset()">되돌리기</button>
+    <script>
+        let change=()=>{
+            document.querySelector("h1").innerText = "Document object 를 알아보자 !";
+        };
+        let change2=()=>{
+            document.querySelector("#one").innerText = "바뀝니다 !";
+        };
+        
+        let send=()=>{
+            let msg=document.querySelector("#쓰기").value;
+            document.querySelector("#받기").value = msg;
+        };
+        
+        let mLeft=0;
+
+        let move=()=>{
+            mLeft +=100;
+            console.log(mLeft);
+            document.querySelector(".box").style.marginLeft = mLeft+"px";
+        };
+        
+        let reset=()=>{
+            mLeft=0;
+            document.querySelector(".box").style.marginLeft = mLeft+"px";
+        };
+    </script>
+</body>
+</html>

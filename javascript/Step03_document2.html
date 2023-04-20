@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step03_document2.html</title>
+    <style>
+        p{
+            color: blue;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            cursor: pointer;
+            text-align: center;
+            line-height: 100px;
+            transition: margin-left 0.4s ease-out;
+            /* margin-left: 100px; */
+        }
+
+    </style>
+</head>
+<body>
+    <h1>인라인 css 테스트</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, nisi consectetur beatae tenetur doloremque minus voluptates libero quidem aliquid fuga at corporis doloribus eius laudantium amet excepturi culpa. Natus, neque.</p>
+    <div class="box" onclick="move()">눌러보셈</div>
+    <script>
+        //실행할 code 를 함수 안에 준비해 둔다.
+        let move=()=>{
+            document.querySelector("div").style.marginLeft="100px";
+        };
+    </script>
+</body>
+</html>

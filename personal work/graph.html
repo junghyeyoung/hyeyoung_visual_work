@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2023_04_05 graph</title>
+    <style>
+        .font{
+            font-family: sans-serif;
+            font-size: x-large;
+            font-weight: bold;
+            padding: 20px;
+        }
+        .my-table{
+            border-collapse: collapse;
+            font-family: sans-serif;
+            text-align: center;
+        }
+        .my-color{
+            background-color: rgb(63, 168, 255);
+            color: aliceblue;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <table border="1" class="my-table">
+    <caption class="font">제주도-목포 배편</caption>
+    <colgroup>
+        <col style="background-color:rgb(193, 255, 234);" width="200">
+        <col width="200">
+        <col width="200">
+        <col width="200">
+        <col width="200">
+        <col width="100">
+        <col width="100">
+        <col width="100">
+    </colgroup>
+        <thead class="my-color">
+            <tr>
+                <tr height="40">
+                <th>선박명</th>
+                <th>객실</th>
+                <th>출발</th>
+                <th>도착</th>
+                <th>소요시간</th>
+                <th>요금</th>
+                <th>좌석</th>
+                <th>차량선적</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td height="30" colspan="8" style="background-color: white;">*이륜차(오토바이,자전거) 및 화물차량은 별도 문의</td>
+                <!-- <td></td> -->
+                <!-- <td></td> -->
+                <!-- <td></td> -->
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td>퀸제누비아호</td>
+                <td>일반실</td>
+                <td>목 포 항(01:00)</td>
+                <td>제 주 항(09:00)</td>
+                <td>5시간</td>
+                <td>30,800원</td>
+                <td>50석</td>
+                <td>o</td>
+            </tr>
+            <tr>
+                <td>퀸제누비아호</td>
+                <td>다인침대실</td>
+                <td>목 포 항(01:00)</td>
+                <td>제 주 항(09:00)</td>
+                <td>5시간</td>
+                <td>60,500원</td>
+                <td>30석</td>
+                <td>o</td>
+            </tr>
+            <tr>
+                <td>퀸메리호</td>
+                <td>일반실</td>
+                <td>목 포 항(09:00)</td>
+                <td>제 주 항(14:00)</td>
+                <td>5시간</td>
+                <td>30,800원</td>
+                <td>50석</td>
+                <td>o</td>
+            </tr>
+            <tr>
+                <td>퀸메리호</td>
+                <td>8인침대</td>
+                <td>목 포 항(09:00)</td>
+                <td>제 주 항(14:00)</td>
+                <td>5시간</td>
+                <td>55,000원</td>
+                <td>8석</td>
+                <td>o</td>
+            </tr>
+        </tbody>
+    </table>
+    
+</body>
+</html>
