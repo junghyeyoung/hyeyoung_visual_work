@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step01_Grid2.html</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+    <style>
+        .container{
+            border: 1px dotted red;
+        }
+        h1, p{
+            border: 1px dotted green;
+        }
+        .row{
+            border: 1px solid blue;
+        }
+        .row > div{
+            border: 1px dotted orange ;
+        }
+    </style>
+</head>
+<body>
+    <!-- container 를 만들고 -->
+    <div class="container">
+        <h1>반응형 Grid 만들기</h1>
+        <!--
+            col-6 의 의미는 화면의 폭과 상관없이 항상 6/12 의 크기로 50% 의 width 를 갖겠다는 것
+            col-sm-6 의 의미는 조건부로 6/12 의 즉, 50% 의 width 를 갖겠다는 것
+            sm 은 화면의 크기가 576px 이상을 의미한다.
+            
+            *주의*
+            화면의 폭이 만일 768px 이상이면 576px 이상이기도 한다.
+            그렇지만 width 는 md 가 우선시 된다.
+            - 우선시 되는 순위
+            sm < md < lg < xl < xxl
+            
+        -->
+        <div class="row">
+            <div class="col-sm-6">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem ad fuga consequatur quod, repudiandae error. Esse, maiores? Quasi error quisquam reiciendis minus ut. Asperiores rem ad earum, officia beatae quas.</p>
+            </div>
+            <div class="col-sm-6">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem ad fuga consequatur quod, repudiandae error. Esse, maiores? Quasi error quisquam reiciendis minus ut. Asperiores rem ad earum, officia beatae quas.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <!--
+                col-sm-6 화면의 폭이 576px 이상일 때 50% 의 width 를 갖겠다.
+                col-md-3 화면의 폭이 768px 이상일 때 25% 의 width 를 갖겠다.
+                화면의 폭이 576px 이상일 때 100% 의 width 를 갖겠다.(div 는 원래 블럭 요소이기 때문에)
+            -->
+            <div class="col-sm-6 col-md-3">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem ad fuga consequatur quod, repudiandae error. Esse, maiores? Quasi error quisquam reiciendis minus ut. Asperiores rem ad earum, officia beatae quas.</p>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem ad fuga consequatur quod, repudiandae error. Esse, maiores? Quasi error quisquam reiciendis minus ut. Asperiores rem ad earum, officia beatae quas.</p>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem ad fuga consequatur quod, repudiandae error. Esse, maiores? Quasi error quisquam reiciendis minus ut. Asperiores rem ad earum, officia beatae quas.</p>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem ad fuga consequatur quod, repudiandae error. Esse, maiores? Quasi error quisquam reiciendis minus ut. Asperiores rem ad earum, officia beatae quas.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
